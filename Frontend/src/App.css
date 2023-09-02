@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.07), 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  color: #212529;
+}
+
+/* Meme Page */
+
+.MemePage {
+  text-align: center;
+  width: 100%;
+  background-image: url("./assets/memeimg3.jpeg"); /* Replace with your image URL */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Optional: Fixed background */
+  height: 100vh; /* Ensure it covers the full viewport height */
+  z-index: -1;
+  
+}
+
+.MemePage .App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: #03045e; */
+  /* padding: 20px; */
+  border-radius: 10px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); */
+  width: 100%; /* Increase the width as needed */
+}
+
+.MemePage .app-title {
+  margin-top: 200px;
+  font-size: 6em;
+  margin-bottom: 45px;
+  color: rgb(0, 0, 0);
+}
+
+.MemePage .meme-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.MemePage .input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+
+.MemePage .input,
+.MemePage .text-area {
+  flex: 1; /* Allow the input boxes to grow and take available space */
+  padding: 15px; /* Increase padding for better spacing */
+  border-radius: 5px;
+  border: 5px solid #61dfff;
+  margin-right: 10px;
+  height: 4.5em; /* Increase the height as desired */
+  width: 20em;
+  font-size: 15px;
+}
+
+.MemePage .button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 10px;
+  height: 3.5em;
+  width: 15em;
+  text-align: center; /* Add this line to center the text */
+  display: flex; /* Add this line to ensure flex alignment */
+  justify-content: center; /* Add this line to center horizontally */
+  align-items: center;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 10px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  transition: background-color 0.2s ease;
+}
+
+.MemePage .button:hover {
+  background-color: #0056b3;
+}
+
+.MemePage .generate-button {
+  background-color: #00cc88;
+  font-size: 1.2em;
+}
+
+.MemePage .generated-meme-card {
+  margin-top: 20px;
+}
+
+.MemePage .meme-card {
+  display: inline-block;
+  position: relative;
+  color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.MemePage .generated-meme-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.MemePage .snake-border {
+  position: relative;
+  border: 20px solid transparent; /* Increase border width */
+  border-image: linear-gradient(45deg, #0c0047, #d39ee9, #aaff93) 10; /* Dark blue, purple, pink gradient */
+  border-image-slice: 1;
+  animation: snakeTrail 2s linear infinite;
+}
+
+@keyframes snakeTrail {
+  0% {
+    border-image-source: linear-gradient(45deg, #0c0047, #d39ee9, #aaff93);
+    border-image-slice: 1;
+  }
+  100% {
+    border-image-source: linear-gradient(45deg, #0c0047, #d39ee9, #aaff93);
+    border-image-slice: 1;
+  }
+}
